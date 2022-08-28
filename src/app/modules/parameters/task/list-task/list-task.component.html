@@ -1,10 +1,12 @@
 <main class="login-main w-100 py-5 d-flex justify-content-center align-items-center">
     <div class="container h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <a routerLink="/parameters/create-task" class="btn btn-primary text-white ">Añadir
+        <a routerLink="/parameters/create-task" class="btn btn-lg btn-success text-white ">Nueva Tarea
             <fa-icon class="pt-2 ms-2 text-white" [icon]="faPlus"></fa-icon>
           </a>
-            <div class="table-responsive"> 
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        
+            <div class="table-responsive mt-2"> 
+                <h4 class="text-light">Pendientes</h4>
                     <table style="background-color: white;" class="table ">
                         <thead>
                         <tr>
@@ -16,7 +18,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr *ngFor="let r of recordList">
+                        <tr *ngFor="let r of recordList | filterestado: false">
                             <td>
                                 {{r.id}}
                             </td>
@@ -39,6 +41,48 @@
                         </tr>
                         </tbody>
                     </table>
+            </div>
+        </div>
+
+        
+
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div id="completadas" class="table-responsive mt-2"> 
+                <h4 class="text-light">Completadas</h4>
+                <table style="background-color: white;" class="table ">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Creador</th>
+                        <th scope="col">Estado</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let r of recordList | filterestado: true">
+                        <td>
+                            {{r.id}}
+                        </td>
+                        <td>
+                            {{r.titulo}}
+                        </td>
+                        <td>
+                            {{r.descripcion}}
+                        </td>
+                        <td>
+                            {{r.creador}}
+                        </td>
+                        <td>
+                            {{r.estado | getEstado }}
+                        </td>
+                        <td class="pt-2">
+                            <a routerLink="/parameters/edition-task/{{r.id}}" class="btn btn-primary me-2"><fa-icon class="text-white" [icon]="faEdit"></fa-icon></a>
+                            <a (click)="removeRecord(r.id)" class="btn btn-danger"><fa-icon class=" text-white" [icon]="faTrash"></fa-icon></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
