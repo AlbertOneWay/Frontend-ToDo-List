@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { ToastComponent } from './toast/toast.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ModalComponent } from './modal/modal.component';
+import { GetEstadoPipe } from './pipes/get-estado.pipe';
 
 
 @NgModule({
   declarations: [
     ToastComponent,
-    ModalComponent
+    ModalComponent,
+    GetEstadoPipe
   ],
   imports: [
     CommonModule,
@@ -16,7 +18,8 @@ import { ModalComponent } from './modal/modal.component';
   ],
   exports: [
     ToastComponent,
-    ModalComponent
+    ModalComponent,
+    GetEstadoPipe
   ]
 })
 export class SharedModule { }

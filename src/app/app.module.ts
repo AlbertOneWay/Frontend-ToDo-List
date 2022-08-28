@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalContainerDirective } from './directives/compartido/modal-container.directive';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { ModalContainerDirective } from './directives/compartido/modal-container
     HomeComponent,
     ToastContainerDirective,
     ModalContainerDirective
-  ],
+    
+    ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

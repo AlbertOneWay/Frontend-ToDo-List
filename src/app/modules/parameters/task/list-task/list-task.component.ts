@@ -9,6 +9,7 @@ import { ModalData } from 'src/app/models/shred/modal-data';
 import { GeneralData } from 'src/app/config/general-data';
 import { ModalService } from '../../../../services/modal/modal.service';
 import { ToastData } from 'src/app/models/shred/toast-data';
+import { GetEstadoPipe } from '../../../../modules/shared/pipes/get-estado.pipe';
 
 @Component({
   selector: 'app-list-task',

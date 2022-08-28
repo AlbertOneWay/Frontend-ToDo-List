@@ -30,7 +30,7 @@
                                 {{r.creador}}
                             </td>
                             <td>
-                                {{r.estado}}
+                                {{r.estado | getEstado }}
                             </td>
                             <td class="pt-2">
                                 <a routerLink="/parameters/edition-task/{{r.id}}" class="btn btn-primary me-2"><fa-icon class="text-white" [icon]="faEdit"></fa-icon></a>

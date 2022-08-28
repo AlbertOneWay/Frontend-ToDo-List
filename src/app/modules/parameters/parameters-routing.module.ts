@@ -11,7 +11,7 @@ const routes: Routes = [
     component: CreateTaskComponent
   },
   {
-    path: "edition-task",
+    path: "edition-task/:id",
     component: EditionTaskComponent
   },
   {
