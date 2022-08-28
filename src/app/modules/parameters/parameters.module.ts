@@ -6,6 +6,7 @@ import { CreateTaskComponent } from './task/create-task/create-task.component';
 import { EditionTaskComponent } from './task/edition-task/edition-task.component';
 import { ListTaskComponent } from './task/list-task/list-task.component';
 import { RemoveTaskComponent } from './task/remove-task/remove-task.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { RemoveTaskComponent } from './task/remove-task/remove-task.component';
     RemoveTaskComponent
   ],
   imports: [
+    FontAwesomeModule,
     CommonModule,
     ParametersRoutingModule
   ]
