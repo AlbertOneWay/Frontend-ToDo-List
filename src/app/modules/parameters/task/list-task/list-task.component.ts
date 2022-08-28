@@ -81,5 +81,38 @@ export class ListTaskComponent implements OnInit, OnDestroy {
     this.subscription.add(modalSubscription);
   }
   
+  registerRecord(id: number, titulo: string, descripcion: string, creador: string){
+    let model = new TaskModel();
+    model.titulo = titulo
+    model.estado = true
+    model.descripcion = descripcion
+    model.creador = creador
+    model.id = id
+
+  
+    this.service.editRecord(model).subscribe({
+      next: (data: TaskModel) =>{
+        const mensajeToast: ToastData = {
+          type: 'success',
+          message: GeneralData.TOAST_MESSAGE_COMPLETE('La tarea')
+        }
+        this.toastService.openToast(mensajeToast);
+        
+        this.router.navigateByUrl('/', {skipLocationChange: true})
+        .then(()=>this.router.navigate(['/parameters/list-task']))
+      },
+      error: (err:any)=>{
+        const mensajeToast: ToastData = {
+          type: 'error',
+          message: GeneralData.TOAST_ERROR_COMPLETE('La tarea')
+        }
+        this.toastService.openToast(mensajeToast);
+      }
+    });
+
+      }
+    
 
 }
+
+

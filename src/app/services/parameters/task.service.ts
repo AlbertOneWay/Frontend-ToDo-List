@@ -54,6 +54,18 @@ export class TaskService {
         estado: data.estado
       },httpOptions);
     }
+
+    editRecordforID(id: number): Observable<any>{
+      const httpOptions = {
+        headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })}
+  
+      return this.http.put<TaskModel>(`${this.url}/tareas/${id}`,{
+        id: id,
+        estado: false
+      },httpOptions);
+    }
   
     deleteRecord(id: number): Observable<any>{
       const httpOptions = {

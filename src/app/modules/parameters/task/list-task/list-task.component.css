@@ -2,3 +2,13 @@
     background-color: #ececec;
     color: #b9b9b9;
 }
+
+.checkbox {
+    width: 30px; height: 30px;
+    
+}
+
+.checkbox:checked{
+    background-color: green!important;
+}
+

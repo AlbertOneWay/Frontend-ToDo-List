@@ -10,6 +10,7 @@
                     <table style="background-color: white;" class="table ">
                         <thead>
                         <tr>
+                            <th scope="col"></th>
                             <th scope="col">#</th>
                             <th scope="col">Titulo</th>
                             <th scope="col">Descripción</th>
@@ -19,6 +20,9 @@
                         </thead>
                         <tbody>
                         <tr *ngFor="let r of recordList | filterestado: false">
+                            <td class="checkbox radio-sm">
+                                <input class="checkbox" type="checkbox" (click)="registerRecord(r.id, r.titulo, r.descripcion, r.creador)">
+                            </td>
                             <td>
                                 {{r.id}}
                             </td>
