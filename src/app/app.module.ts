@@ -14,6 +14,7 @@ import { ToastContainerDirective } from './directives/compartido/toast-container
 import { CommonModule } from '@angular/common';
 import { SharedModule } from './modules/shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalContainerDirective } from './directives/compartido/modal-container.directive';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NotFoundComponent,
     InternalServerErrorComponent,
     HomeComponent,
-    ToastContainerDirective
+    ToastContainerDirective,
+    ModalContainerDirective
   ],
   imports: [
     BrowserModule,

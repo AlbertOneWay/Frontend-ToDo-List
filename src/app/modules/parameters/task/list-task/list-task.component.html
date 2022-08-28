@@ -32,6 +32,10 @@
                             <td>
                                 {{r.estado}}
                             </td>
+                            <td class="pt-2">
+                                <a routerLink="/parameters/edition-task/{{r.id}}" class="btn btn-primary me-2"><fa-icon class="text-white" [icon]="faEdit"></fa-icon></a>
+                                <a (click)="removeRecord(r.id)" class="btn btn-danger"><fa-icon class=" text-white" [icon]="faTrash"></fa-icon></a>
+                              </td>
                         </tr>
                         </tbody>
                     </table>
