@@ -9,6 +9,8 @@ export namespace GeneralData{
     export const TOAST_MESSAGE_EDIT = (componente: string) => `${componente} se ha editado correctamente`;
     export const TOAST_ERROR_EDIT = (componente: string) => `${componente} no se ha editado`;
 
+    export const RECORDS_BY_PAGE = 5;
+
     export const ARG_ELIMINACION = "Eliminación"
     export const CONFIRMACION_ELIMINACION= "¿Seguro que desea eliminar la tarea?"
 

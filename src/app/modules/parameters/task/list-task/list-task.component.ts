@@ -22,6 +22,13 @@ export class ListTaskComponent implements OnInit, OnDestroy {
   faEdit = faEdit;
   faTrash = faTrash;
 
+  pageSize: number = GeneralData.RECORDS_BY_PAGE;
+  pageSize2: number = GeneralData.RECORDS_BY_PAGE;
+  p: number = 1;
+  p2:number = 1;
+  total:number = 0;
+  total2:number = 0;
+
   constructor(
     private service: TaskService,
     private router: Router,
@@ -97,7 +104,7 @@ export class ListTaskComponent implements OnInit, OnDestroy {
           message: GeneralData.TOAST_MESSAGE_COMPLETE('La tarea')
         }
         this.toastService.openToast(mensajeToast);
-        
+
         this.router.navigateByUrl('/', {skipLocationChange: true})
         .then(()=>this.router.navigate(['/parameters/list-task']))
       },
