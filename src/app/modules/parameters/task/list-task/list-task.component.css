@@ -1,0 +1,27 @@
+#completadas table{
+    background-color: #ececec;
+    color: #b9b9b9;
+}
+
+.checkbox {
+    width: 30px; height: 30px;
+    
+}
+
+.checkbox:checked{
+    background-color: green!important;
+}
+
+#btn-created{
+    background-color: #CEF640;
+    color: black;
+}
+
+#btn-created:hover{
+    background-color: #accf2d;
+    color: black;
+}
+
+thead{
+    background-color: #3DA5F0;
+}

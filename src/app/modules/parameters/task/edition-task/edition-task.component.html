@@ -1,0 +1,54 @@
+<section class="py-5 d-flex justify-content-center align-items-center mh-100" style="background-color: white; height:max-content">
+    <div class="container h-100 ">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5 ">
+          <form [formGroup]="formulario">
+            <input type="hidden" formControlName="id">
+            <p class="fs-2 fw-bold">Editar Tarea</p>
+            
+            <hr>
+  
+            <div class="mb-3">
+              <label for="titulo" required="required" class="form-label fw-bold">Titulo </label>
+              <fa-icon class="ps-1 icon" size="xs" [icon]="faAsterisk"></fa-icon>
+              <input formControlName="titulo" type="text" class="form-control" id="titulo">
+            </div>
+            <div class="mb-3">
+                <label for="descripcion" required="required" class="form-label fw-bold">Descripcion </label>
+                <fa-icon class="ps-1 icon" size="xs" [icon]="faAsterisk"></fa-icon>
+                <input formControlName="descripcion" type="text" class="form-control" id="descripcion">
+            </div>
+            <div class="mb-3">
+                <label for="creador" required="required" class="form-label fw-bold">Creador </label>
+                <fa-icon class="ps-1 icon" size="xs" [icon]="faAsterisk"></fa-icon>
+                <input formControlName="creador" type="text" class="form-control" id="creador">
+            </div>
+
+            <div class="mb-3">
+                <label for="estado" required="required" class="form-label fw-bold">Estado </label>
+                <fa-icon class="ps-1 icon" size="xs" [icon]="faAsterisk"></fa-icon>
+                <select formControlName="estado" type="select" class="form-select" 
+                  id="estado">
+    
+                  <option value="true" [selected]="true">Completada</option>
+                  <option value="false" >Pendiente</option>
+    
+                </select>
+            </div>
+
+  
+            <div class="d-flex align-items-center justify-content-center w-100">
+              <button (click)="createRecord()" [disabled]="this.formulario.invalid" type="submit"
+               class="btn btn-primary text-white w-50 me-2 ">
+                Editar registro
+              </button>
+              <button type="reset" routerLink="/parameters/list-task"
+                class="btn bg-white border border-primary w-50 text-primary">
+                Cancelar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,11 @@
+.navbar{
+    background-color: #3DA5F0;
+}
+
+.nav-item{
+    background-color: #0D6EFD;
+    margin-right: 60px;
+}
+.nav-item:hover{
+    background-color: #3DA5F0;
+}
