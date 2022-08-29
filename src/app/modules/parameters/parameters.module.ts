@@ -9,6 +9,7 @@ import { RemoveTaskComponent } from './task/remove-task/remove-task.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { SharedModule } from '../shared/shared.module';
     ParametersRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    NgxPaginationModule
   ]
 })
 export class ParametersModule { }

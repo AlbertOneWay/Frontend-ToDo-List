@@ -1,14 +1,14 @@
 <main class="login-main w-100 py-5 d-flex justify-content-center align-items-center">
     <div class="container h-100">
-        <a routerLink="/parameters/create-task" class="btn btn-lg btn-success text-white ">Nueva Tarea
-            <fa-icon class="pt-2 ms-2 text-white" [icon]="faPlus"></fa-icon>
+        <a routerLink="/parameters/create-task" id="btn-created" class="btn btn-lg btn-success text-dark ">Nueva Tarea
+            <fa-icon class="pt-2 ms-2 text-dark" [icon]="faPlus"></fa-icon>
           </a>
       <div class="row d-flex justify-content-center align-items-center h-100">
         
-            <div class="table-responsive mt-2"> 
+            <div class="table-responsive mt-3"> 
                 <h4 class="text-light">Pendientes</h4>
                     <table style="background-color: white;" class="table ">
-                        <thead>
+                        <thead class="text-white h5">
                         <tr>
                             <th scope="col"></th>
                             <th scope="col">#</th>
@@ -16,6 +16,7 @@
                             <th scope="col">Descripción</th>
                             <th scope="col">Creador</th>
                             <th scope="col">Estado</th>
+                            <th scope="col"></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -54,13 +55,14 @@
             <div id="completadas" class="table-responsive mt-2"> 
                 <h4 class="text-light">Completadas</h4>
                 <table style="background-color: white;" class="table ">
-                    <thead>
+                    <thead class="h5">
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Titulo</th>
                         <th scope="col">Descripción</th>
                         <th scope="col">Creador</th>
                         <th scope="col">Estado</th>
+                        <th scope="col"></th>
                     </tr>
                     </thead>
                     <tbody>
