@@ -62,6 +62,7 @@
                 <table style="background-color: white;" class="table ">
                     <thead class="h5">
                     <tr>
+                        <th scope="col"></th>
                         <th scope="col">#</th>
                         <th scope="col">Titulo</th>
                         <th scope="col">Descripción</th>
@@ -72,6 +73,9 @@
                     </thead>
                     <tbody>
                     <tr *ngFor="let r of recordList | filterestado: true | paginate: {id: 'pagination2', itemsPerPage: pageSize2, currentPage: p2, totalItems: total2 }">
+                        <td class="checkbox radio-sm">
+                            <input class="checkbox" type="checkbox" checked (click)="unregisterRecord(r.id, r.titulo, r.descripcion, r.creador)">
+                        </td>
                         <td>
                             {{r.id}}
                         </td>

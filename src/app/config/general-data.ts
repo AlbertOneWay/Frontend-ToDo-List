@@ -8,6 +8,8 @@ export namespace GeneralData{
     export const TOAST_ERROR_DELETE = (componente: string) => `${componente} no se ha eliminado`;
     export const TOAST_MESSAGE_EDIT = (componente: string) => `${componente} se ha editado correctamente`;
     export const TOAST_ERROR_EDIT = (componente: string) => `${componente} no se ha editado`;
+    export const TOAST_MESSAGE_UNCOMPLETE = (componente: string) => `${componente} se ha desmarcado`;
+    export const TOAST_ERROR_UNCOMPLETE = (componente: string) => `${componente} no se ha desmarcado`;
 
     export const RECORDS_BY_PAGE = 5;
 
